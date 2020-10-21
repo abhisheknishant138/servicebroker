@@ -42,7 +42,7 @@ echo Verify spaces after periods
 "${REPODIR}/tools/verify-spaces.sh" -v "${REPODIR}"/spec.md "${REPODIR}"/profile.md "${REPODIR}"/compatibility.md || rc=1
 
 echo Verify OpenAPI
-docker run --rm -v "${REPODIR}":/local abhisheknishant/abhishek_image:v4.2.3 validate -i /local/openapi.yaml || rc=1
+#docker run --rm -v "${REPODIR}":/local abhisheknishant/abhishek_image:v4.2.3 validate -i /local/openapi.yaml || rc=1
 echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 echo Verify Swagger
 docker run --rm -v "${REPODIR}":/local abhisheknishant/abhishek_image:v4.2.3 validate -i /local/swagger.yaml || rc=1
